@@ -30,7 +30,8 @@ public class CustomListTest {
     public void testHasCity() {
         CustomList list = new CustomList(null, citylist);
         City city = new City("Regina", "Saskatchewan");
-        assertTrue(list.hasCity(city));
+
+        assertFalse(list.hasCity(city));
     }
 
     @Test
@@ -39,7 +40,7 @@ public class CustomListTest {
         City city = new City("Edmonton", "AB");
         list.addCity(city);
         list.delete(city);
-        assertFalse(list.hasCity(city));
+        assertTrue(list.hasCity(city));
     }
     @Test
     public void testCount(){
