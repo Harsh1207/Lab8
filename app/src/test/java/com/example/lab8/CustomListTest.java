@@ -43,7 +43,6 @@ public class CustomListTest {
         list.addCity(city);
         list.delete(city);
         assertFalse(list.hasCity(city));
-
     }
 
 
