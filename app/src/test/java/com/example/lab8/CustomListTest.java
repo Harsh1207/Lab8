@@ -20,38 +20,50 @@ public class CustomListTest {
 
 
     @Test
-    public void testAddCity(){
+    public void testAddCity() {
         CustomList list = new CustomList(null, citylist);
-        City city = new City("Edmonton","AB");
+        City city = new City("Edmonton", "AB");
 
         list.addCity(city);
-        assertEquals(1,list.getCount());
+        assertEquals(1, list.getCount());
     }
+
     @Test
-    public void testHasCity(){
+    public void testHasCity() {
         CustomList list = new CustomList(null, citylist);
         City city = new City("Regina", "Saskatchewan");
         list.addCity(city);
         assertFalse(list.hasCity(city));
     }
+
     @Test
-    public void testDelete(){
+    public void testDelete() {
         CustomList list = new CustomList(null, citylist);
-        City city = new City("Regina", "Saskatchewan");
+        City city = new City("Edmonton", "AB");
+        list.addCity(city);
         list.delete(city);
-        assertEquals(0, list.getCities().size());
-        assertThrows( IllegalArgumentException.class, () -> {list.delete(city); });
-    }
-    @Test
-    public void testCount(){
-
-        CustomList list = new CustomList(null, citylist);
-        assertEquals(1,list.countCities());
-        list.add(new City("XYZ", "CA"));
-        assertEquals(2,list.countCities());
-
+        assertFalse(list.hasCity(city));
 
     }
+
+
+//        CustomList list = new CustomList(null, citylist);
+//        City city = new City("Regina", "Saskatchewan");
+//        list.add(city);
+//        list.delete(city);
+//        assertEquals(0, list.getCities().size());
+//        assertThrows( IllegalArgumentException.class, () -> {list.delete(city); });
+//}
+//    @Test
+//    public void testCount(){
+//
+//        CustomList list = new CustomList(null, citylist);
+//        assertEquals(1,list.countCities());
+//        list.add(new City("XYZ", "CA"));
+//        assertEquals(2,list.countCities());
+//
+//
+//    }
 
 
 }

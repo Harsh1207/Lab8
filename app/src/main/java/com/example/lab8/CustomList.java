@@ -75,25 +75,15 @@ public class CustomList extends ArrayAdapter<City> {
         }
         return false;
     }
-    public static void delete(City city){
+    public void delete(City city){
         /**
          * Check if a city is present in the list. If it does then remove it from the list, if not then throw an exception
          */
-        int removeIdx = -1;
-        for(int i=0; i < cities.size();i++){
-            String cityExist = cities.get(i).getCityName();
-            if(Objects.equals(cityExist, city.getCityName())) {
-                removeIdx = i;
-            }
-        }
-        if (removeIdx != -1) {
 
-
-            cities.remove(removeIdx);
-
-        } else {
-            throw new IllegalArgumentException();
-        }
+//        if (hasCity(city)){
+//            cities.remove(city);
+//
+//        }
 
     }
     public int countCities(){
