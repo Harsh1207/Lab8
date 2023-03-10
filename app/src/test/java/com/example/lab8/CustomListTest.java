@@ -34,11 +34,11 @@ public class CustomListTest {
 
     @Test
     public void testDelete() {
-//        CustomList list = new CustomList(null, citylist);
-//        City city = new City("Edmonton", "AB");
-//        list.addCity(city);
-//        list.delete(city);
-//        assertFalse(list.hasCity(city));
+        CustomList list = new CustomList(null, citylist);
+        City city = new City("Edmonton", "AB");
+        list.addCity(city);
+        list.delete(city);
+        assertFalse(list.hasCity(city));
     }
     @Test
     public void testCount(){
