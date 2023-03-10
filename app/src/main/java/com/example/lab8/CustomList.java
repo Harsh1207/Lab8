@@ -70,9 +70,9 @@ public class CustomList extends ArrayAdapter<City> {
          * When given a city, return whether or not it belongs in the list
          */
 
-//        if (cities.contains(city)){
-//            return true;
-//        }
+        if (cities.contains(city)){
+            return true;
+        }
         return false;
     }
     public static void delete(City city){
